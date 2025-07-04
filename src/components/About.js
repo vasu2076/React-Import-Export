@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Footer from "./footer";
+import { Link } from "react-router-dom"
 
 const About = () => {
    const imgurl = "https://img.freepik.com/free-photo/aerial-view-cargo-ship-cargo-container-harbor_335224-1380.jpg?uid=R203151179&ga=GA1.1.627833558.1747904160&semt=ais_hybrid&w=740"
@@ -538,86 +539,88 @@ const About = () => {
   transform: translateY(0);
 }
     `}</style>
-           <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><span>Import-Export</span></a>
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
+   <nav id="navigation" className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <Link className="navbar-brand" to="/"><span>Import-Export</span></Link>
+
+    <button className="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span className="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav align-items-center">
+    <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul className="navbar-nav align-items-center">
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="homeDropdown" role="button" data-bs-toggle="dropdown">
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">
             Home
           </a>
-          <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-            <li><a class="dropdown-item" href="/">Home 1</a></li>
-            <li><a class="dropdown-item" href="/home">Home 2</a></li>
+          <ul className="dropdown-menu" aria-labelledby="homeDropdown">
+            <li><Link className="dropdown-item" to="/">Home 1</Link></li>
+            <li><Link className="dropdown-item" to="/home">Home 2</Link></li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="projectDropdown" role="button" data-bs-toggle="dropdown">
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown">
             Project
           </a>
-          <ul class="dropdown-menu" aria-labelledby="projectDropdown">
-            <li><a class="dropdown-item" href="/Project">Project 1</a></li>
-            <li><a class="dropdown-item" href="/Project2">Project 2</a></li>
+          <ul className="dropdown-menu" aria-labelledby="projectDropdown">
+            <li><Link className="dropdown-item" to="/Project">Project 1</Link></li>
+            <li><Link className="dropdown-item" to="/Project2">Project 2</Link></li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="serviceDropdown" role="button" data-bs-toggle="dropdown">
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button" data-bs-toggle="dropdown">
             Service
           </a>
-          <ul class="dropdown-menu" aria-labelledby="serviceDropdown">
-            <li><a class="dropdown-item" href="/Service">Service 1</a></li>
-            <li><a class="dropdown-item" href="/Service2">Service 2</a></li>
+          <ul className="dropdown-menu" aria-labelledby="serviceDropdown">
+            <li><Link className="dropdown-item" to="/Service">Service 1</Link></li>
+            <li><Link className="dropdown-item" to="/Service2">Service 2</Link></li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="quoteDropdown" role="button" data-bs-toggle="dropdown">
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="quoteDropdown" role="button" data-bs-toggle="dropdown">
             Book Quote
           </a>
-          <ul class="dropdown-menu" aria-labelledby="quoteDropdown">
-            <li><a class="dropdown-item" href="/Bookquote">Quote 1</a></li>
-            <li><a class="dropdown-item" href="/Bookquote2">Quote 2</a></li>
+          <ul className="dropdown-menu" aria-labelledby="quoteDropdown">
+            <li><Link className="dropdown-item" to="/Bookquote">Quote 1</Link></li>
+            <li><Link className="dropdown-item" to="/Bookquote2">Quote 2</Link></li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
             About
           </a>
-          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" href="/about">About 1</a></li>
-            <li><a class="dropdown-item" href="/about2">About 2</a></li>
+          <ul className="dropdown-menu" aria-labelledby="aboutDropdown">
+            <li><Link className="dropdown-item" to="/about">About 1</Link></li>
+            <li><Link className="dropdown-item" to="/about2">About 2</Link></li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="contactDropdown" role="button" data-bs-toggle="dropdown">
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
             Contact
           </a>
-          <ul class="dropdown-menu" aria-labelledby="contactDropdown">
-            <li><a class="dropdown-item" href="/Contact">Contact 1</a></li>
-            <li><a class="dropdown-item" href="/Contact2">Contact 2</a></li>
+          <ul className="dropdown-menu" aria-labelledby="contactDropdown">
+            <li><Link className="dropdown-item" to="/Contact">Contact 1</Link></li>
+            <li><Link className="dropdown-item" to="/Contact2">Contact 2</Link></li>
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a href="/Bookquote" class="phone-btn">
-            Book quote <i class="fa-solid fa-chevron-right"></i>
-          </a>
+        <li className="nav-item">
+          <Link to="/Bookquote" className="phone-btn">
+            Book quote <i className="fa-solid fa-chevron-right"></i>
+          </Link>
         </li>
 
       </ul>
     </div>
   </div>
 </nav>
+
 
 <section className="slide-up-element page-banner"  style={{background: `url("${imgurl}") no-repeat center center/cover`}}>
     <div class="overlay"></div>
