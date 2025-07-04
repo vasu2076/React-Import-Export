@@ -951,12 +951,15 @@ const Home2 = () => {
           </div>
 
           <div className="cta-buttons">
-            <a href="/Service" className="btn btn-primary">
+              <Link className="btn btn-primary" to="/Service">
+            {/* <a href="/Service" className="btn btn-primary"> */}
               <i className="fas fa-chart-line" style={{ marginRight: "10px" }}></i> Our Services
-            </a>
-            <a href="/Bookquote" className="btn btn-secondary">
+            {/* </a> */}
+            </Link>
+              <Link className="btn btn-secondary" to="/Bookquote">
               <i className="fas fa-headset" style={{ marginRight: "10px" }}></i> Get a Quote
-            </a>
+            {/* </a> */}
+            </Link>
           </div>
         </div>
       </section>
