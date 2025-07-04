@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Footer from "./footer";
 import { Link } from "react-router-dom"
 
+
 const About = () => {
    const imgurl = "https://img.freepik.com/free-photo/aerial-view-cargo-ship-cargo-container-harbor_335224-1380.jpg?uid=R203151179&ga=GA1.1.627833558.1747904160&semt=ais_hybrid&w=740"
   
