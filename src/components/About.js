@@ -556,7 +556,7 @@ const About = () => {
           </a>
           <ul className="dropdown-menu" aria-labelledby="homeDropdown">
             <li><Link className="dropdown-item" to="/">Home 1</Link></li>
-            <li><Link className="dropdown-item" to="/home">Home 2</Link></li>
+            <li><Link className="dropdown-item" to="#/home">Home 2</Link></li>
           </ul>
         </li>
 
@@ -565,8 +565,8 @@ const About = () => {
             Project
           </a>
           <ul className="dropdown-menu" aria-labelledby="projectDropdown">
-            <li><Link className="dropdown-item" to="/Project">Project 1</Link></li>
-            <li><Link className="dropdown-item" to="/Project2">Project 2</Link></li>
+            <li><Link className="dropdown-item" to="#/Project">Project 1</Link></li>
+            <li><Link className="dropdown-item" to="#/Project2">Project 2</Link></li>
           </ul>
         </li>
 
@@ -575,8 +575,8 @@ const About = () => {
             Service
           </a>
           <ul className="dropdown-menu" aria-labelledby="serviceDropdown">
-            <li><Link className="dropdown-item" to="/Service">Service 1</Link></li>
-            <li><Link className="dropdown-item" to="/Service2">Service 2</Link></li>
+            <li><Link className="dropdown-item" to="#/Service">Service 1</Link></li>
+            <li><Link className="dropdown-item" to="#/Service2">Service 2</Link></li>
           </ul>
         </li>
 
@@ -585,8 +585,8 @@ const About = () => {
             Book Quote
           </a>
           <ul className="dropdown-menu" aria-labelledby="quoteDropdown">
-            <li><Link className="dropdown-item" to="/Bookquote">Quote 1</Link></li>
-            <li><Link className="dropdown-item" to="/Bookquote2">Quote 2</Link></li>
+            <li><Link className="dropdown-item" to="#/Bookquote">Quote 1</Link></li>
+            <li><Link className="dropdown-item" to="#/Bookquote2">Quote 2</Link></li>
           </ul>
         </li>
 
@@ -595,8 +595,8 @@ const About = () => {
             About
           </a>
           <ul className="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><Link className="dropdown-item" to="/about">About 1</Link></li>
-            <li><Link className="dropdown-item" to="/about2">About 2</Link></li>
+            <li><Link className="dropdown-item" to="#/about">About 1</Link></li>
+            <li><Link className="dropdown-item" to="#/about2">About 2</Link></li>
           </ul>
         </li>
 
@@ -605,13 +605,13 @@ const About = () => {
             Contact
           </a>
           <ul className="dropdown-menu" aria-labelledby="contactDropdown">
-            <li><Link className="dropdown-item" to="/Contact">Contact 1</Link></li>
-            <li><Link className="dropdown-item" to="/Contact2">Contact 2</Link></li>
+            <li><Link className="dropdown-item" to="#/Contact">Contact 1</Link></li>
+            <li><Link className="dropdown-item" to="#/Contact2">Contact 2</Link></li>
           </ul>
         </li>
 
         <li className="nav-item">
-          <Link to="/Bookquote" className="phone-btn">
+          <Link to="#/Bookquote" className="phone-btn">
             Book quote <i className="fa-solid fa-chevron-right"></i>
           </Link>
         </li>
