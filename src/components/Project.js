@@ -196,7 +196,7 @@ const Project = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle active" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown">
             Project
           </a>
           <ul className="dropdown-menu" aria-labelledby="projectDropdown">
@@ -226,7 +226,7 @@ const Project = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle " href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
             About
           </a>
           <ul className="dropdown-menu" aria-labelledby="aboutDropdown">

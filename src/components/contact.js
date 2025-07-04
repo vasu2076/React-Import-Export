@@ -111,7 +111,7 @@ const Contact = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle " href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
             About
           </a>
           <ul className="dropdown-menu" aria-labelledby="aboutDropdown">
@@ -121,7 +121,7 @@ const Contact = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle active" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
             Contact
           </a>
           <ul className="dropdown-menu" aria-labelledby="contactDropdown">

@@ -1039,7 +1039,7 @@ const Home = () => {
       <ul className="navbar-nav align-items-center">
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">
             Home
           </a>
           <ul className="dropdown-menu" aria-labelledby="homeDropdown">
@@ -1079,7 +1079,7 @@ const Home = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle " href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
             About
           </a>
           <ul className="dropdown-menu" aria-labelledby="aboutDropdown">

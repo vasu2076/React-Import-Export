@@ -101,7 +101,7 @@ const Bookquote = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="quoteDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle active" href="#" id="quoteDropdown" role="button" data-bs-toggle="dropdown">
             Book Quote
           </a>
           <ul className="dropdown-menu" aria-labelledby="quoteDropdown">
@@ -111,7 +111,7 @@ const Bookquote = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle " href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
             About
           </a>
           <ul className="dropdown-menu" aria-labelledby="aboutDropdown">

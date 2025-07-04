@@ -5,76 +5,61 @@ import { Link } from "react-router-dom";
 const Home2 = () => {
   const imgurl = "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80";
   
-    useEffect(() => {
-    function animateValue(id, start, end, duration) {
-      const obj = document.getElementById(id);
-      let startTimestamp = null;
-      const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        const value = Math.floor(progress * (end - start) + start);
-        if (obj) obj.innerHTML = value;
-        if (progress < 1) {
-          window.requestAnimationFrame(step);
-        }
-      };
-      window.requestAnimationFrame(step);
+ useEffect(() => {
+  function animateValue(id, start, end, duration) {
+    const obj = document.getElementById(id);
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      if (obj) obj.innerHTML = value;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        animateValue("stat1", 0, 75, 2000);
+        animateValue("stat2", 0, 12500, 2500);
+        animateValue("stat3", 0, 850, 1800);
+      }
+    },
+    { threshold: 0.5 }
+  );
+
+  const heroElement = document.querySelector(".hero");
+  if (heroElement) observer.observe(heroElement);
+
+  const handleScroll = () => {
+    const scrollPosition = window.pageYOffset;
+    const hero = document.querySelector(".hero");
+    const heroBg = document.querySelector(".hero-bg");
+    const content = document.querySelector(".hero-content");
+
+    if (hero && heroBg) {
+      heroBg.style.transform = `translateZ(-10px) scale(2.1) translateY(${scrollPosition * 0.5}px)`;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          animateValue("stat1", 0, 75, 2000);
-          animateValue("stat2", 0, 12500, 2500);
-          animateValue("stat3", 0, 850, 1800);
-        }
-      },
-      { threshold: 0.5 }
-    );
+    if (content && hero) {
+      const scrollPercent = scrollPosition / (hero.offsetHeight * 0.5);
+      content.style.opacity = 1 - scrollPercent;
+    }
+  };
 
-    const heroElement = document.querySelector(".hero");
-    if (heroElement) observer.observe(heroElement);
+  window.addEventListener("scroll", handleScroll);
 
-    const handleScroll = () => {
-      const scrollPosition = window.pageYOffset;
-      const hero = document.querySelector(".hero");
-      const heroBg = document.querySelector(".hero-bg");
-      const content = document.querySelector(".hero-content");
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    observer.disconnect();
+  };
+}, []);
 
-      if (hero && heroBg) {
-        heroBg.style.transform = `translateZ(-10px) scale(2.1) translateY(${
-          scrollPosition * 0.5
-        }px)`;
-      }
 
-      if (content && hero) {
-        const scrollPercent = scrollPosition / (hero.offsetHeight * 0.5);
-        content.style.opacity = 1 - scrollPercent;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    const smoothScrollAnchors = document.querySelectorAll('a[href^="#"]');
-    smoothScrollAnchors.forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
-
-    return () => {
-      // Cleanup
-      window.removeEventListener("scroll", handleScroll);
-      observer.disconnect();
-      smoothScrollAnchors.forEach((anchor) => {
-        anchor.removeEventListener("click", () => {});
-      });
-    };
-  }, []);
 
    useEffect(() => {
     const filterButtons = document.querySelectorAll(".filter-buttons button");
@@ -852,7 +837,7 @@ const Home2 = () => {
       <ul className="navbar-nav align-items-center">
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle active" href="" id="homeDropdown" role="button" data-bs-toggle="dropdown">
             Home
           </a>
           <ul className="dropdown-menu" aria-labelledby="homeDropdown">
@@ -862,7 +847,7 @@ const Home2 = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle" href="" id="projectDropdown" role="button" data-bs-toggle="dropdown">
             Project
           </a>
           <ul className="dropdown-menu" aria-labelledby="projectDropdown">
@@ -872,7 +857,7 @@ const Home2 = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle" href="" id="serviceDropdown" role="button" data-bs-toggle="dropdown">
             Service
           </a>
           <ul className="dropdown-menu" aria-labelledby="serviceDropdown">
@@ -882,7 +867,7 @@ const Home2 = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="quoteDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle" href="" id="quoteDropdown" role="button" data-bs-toggle="dropdown">
             Book Quote
           </a>
           <ul className="dropdown-menu" aria-labelledby="quoteDropdown">
@@ -892,7 +877,7 @@ const Home2 = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle " href="" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
             About
           </a>
           <ul className="dropdown-menu" aria-labelledby="aboutDropdown">
@@ -902,7 +887,7 @@ const Home2 = () => {
         </li>
 
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
+          <a className="nav-link dropdown-toggle" href="" id="contactDropdown" role="button" data-bs-toggle="dropdown">
             Contact
           </a>
           <ul className="dropdown-menu" aria-labelledby="contactDropdown">
