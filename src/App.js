@@ -1,5 +1,5 @@
 import './App.css';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Project from './components/Project';
@@ -15,7 +15,7 @@ import Home2 from './components/Home2';
 
 function App() {
   return (
-   <Router>
+   <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home2 />} />
@@ -30,7 +30,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Contact2" element={<Contact2 />} />
       </Routes>
-    </Router>
+   </HashRouter>
   );
 }
 
