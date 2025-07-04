@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Footer from "./footer";
+import { Link } from "react-router-dom";
 
 const Project2 = () => {
     const imgurl = "https://demo.bytelabx.com/laravel/quriar/assets/img/hero/hero-bg-2.jpg";
