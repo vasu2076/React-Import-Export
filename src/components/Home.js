@@ -1141,8 +1141,8 @@ const Home = () => {
                 business growth.
               </p>
               <div className="slide-buttons">
-                <a href="/Service2">Explore Services</a>
-                <a href="/Bookquote2">Get a Quote</a>
+                <Link to="/Service2">Explore Services</Link>
+                <Link to="/Bookquote2">Get a Quote</Link>
               </div>
             </div>
           </div>
