@@ -15,7 +15,7 @@ import Home2 from './components/Home2';
 
 function App() {
   return (
-    <Router>
+   <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home2 />} />
